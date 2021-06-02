@@ -4,7 +4,7 @@
 import logging
 from datetime import datetime
 
-from flask import g, request
+from flask import g, request, render_template, session
 from flask_restful import Resource
 
 import api.error.errors as error
@@ -18,7 +18,9 @@ from api.schemas.schemas import UserSchema
 class Index(Resource):
     @staticmethod
     def get():
-        return "Hello Flask Restful Example!"
+        #return "Hello Flask Restful Example!"
+        data = []
+        return render_template('index.html', u=data, c=len(data), req_method=request.method)
 
 
 class Register(Resource):

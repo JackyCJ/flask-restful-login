@@ -4,6 +4,7 @@
 import os
 
 from flask import Flask
+from flask_bootstrap import Bootstrap
 
 from api.conf.config import SQLALCHEMY_DATABASE_URI
 from api.conf.routes import generate_routes
@@ -17,6 +18,9 @@ def create_app():
 
     # Create a flask app.
     app = Flask(__name__)
+
+    #
+    bootstrap = Bootstrap(app)
 
     # Set debug true for catching the errors.
     app.config['DEBUG'] = True

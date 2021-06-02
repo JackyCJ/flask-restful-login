@@ -1,0 +1,122 @@
+
+div.cTitle
+{
+	font-size: 14px;
+	color: dimgray;
+	font-weight: bold;
+	border-bottom: gainsboro 1px solid;
+	margin-bottom:5px;
+	padding-bottom:5px;
+}
+
+div.cSearch
+{
+	margin-bottom:15px;
+}
+
+div.cComicType
+{
+	margin-bottom:15px;
+}
+
+div.cComicType a
+{
+	margin-right:15px;
+}
+div.cComicType .c1
+{
+	line-height: 150%;
+}
+
+div.cPinYin
+{
+	margin-bottom:15px;
+}
+div.cPinYin a
+{
+	
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 2px;
+	border-right: #50A029 1px solid;
+	border-top: #50A029 1px solid;
+	border-left: #50A029 1px solid;
+	border-bottom: #50A029 1px solid;
+	background-color: #a0df82;
+	color: #ffffff;
+}
+div.cPinYin a:hover
+{
+	background-color: darkorange;
+}
+
+div.cPinYin .c1
+{
+	line-height: 180%;
+}
+
+div.cMBR_Title
+{
+	padding:3px;
+	height:30px;
+}
+
+div.cComicPageChange
+{
+	float:right;
+}
+div.cComicPageChange2
+{
+	clear:left;
+	padding:3px;
+	text-align:right;
+}
+
+span.cPageChangeLink
+{
+	padding-left:20px;
+}
+
+
+/*  Í¼Æ¬ÁÐ±í  */
+
+
+div.cComicList
+{
+	
+}
+
+div.cComicList img
+{
+	width: 100px;
+	height: 120px;
+	border-right: dimgray 1px solid;
+	border-top: dimgray 1px solid;
+	border-left: dimgray 1px solid;
+	border-bottom: dimgray 1px solid;
+	margin-bottom:5px;
+}
+
+div.cComicList ul
+{
+	margin-left:1px;
+
+}
+
+div.cComicList LI
+{
+	float: left;
+	margin-left: 0px;
+	overflow: hidden;
+	width: 128px;
+	height: 190px;
+	text-align: center;
+	border-bottom: slategray 1px dashed;
+	margin-bottom: 10px;
+	margin-right: 0px;
+}
+
+div.cComicList li p
+{
+    color: red;
+}

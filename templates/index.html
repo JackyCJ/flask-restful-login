@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}首页{% endblock %}
+{% block page_content %}
+    <form action="" method="POST">
+        <div class="form-group">
+            <span><input type="text" class="form-control" id="search_context" placeholder="搜索内容" name="search"></span>
+        </div>
+        <button type="submit" class="btn btn-block" onclick="search()">搜索</button>
+        <span><a>找到{{ c }}个</a></span>
+    </form>
+    <table class="table table-bordered",border="1">
+        <tr>
+            <th>序号</th>
+            <th>时间</th>
+            <th>标题</th>
+            <th>热度</th>
+            <th>来源</th>
+            <th>地址</th>
+        </tr>
+            {% for i in u %}
+                <tr>
+                    <td>{{ i['index'] }}</td>
+                    <td>{{ i['time'] }}</td>
+                    <td><a href="{{ i['url'] }}">{{ i['title'] }}</a></td>
+                    <td>{{ i['hot'] }}</td>
+                    <td>{{ i['source'] }}</td>
+                    <td>
+                        <a href="{{ i['url'] }}">
+                            查看
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+    </table>
+{% endblock %}
