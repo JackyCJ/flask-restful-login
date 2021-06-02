@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
+import json
 from flask_restful import Api
-
+from flask import make_response
 from api.handlers.UserHandlers import (
     DataAdminRequired,
     DataUserRequired,
@@ -20,6 +20,15 @@ def generate_routes(app):
 
     # Create api.
     api = Api(app)
+
+    @api.representation("text/html")  # 保证restful也能够通过render_template渲染模板
+    def output_html(data, code, headers):
+        if isinstance(data, str):
+            # data是字符串形式的html文本
+            resp = make_response(data)  # 构造Response对象
+            return resp
+        else:
+            return make_response(json.dumps(data), mimetype='application/json')
 
     # Add all routes resources.
     # Index page.

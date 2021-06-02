@@ -20,7 +20,7 @@ class Index(Resource):
     def get():
         #return "Hello Flask Restful Example!"
         data = []
-        return render_template('index.html', u=data, c=len(data), req_method=request.method)
+        return render_template('index.html', u=data, c=len(data))
 
 
 class Register(Resource):
